@@ -1,0 +1,55 @@
+# web_app/.dockerignore
+
+# Ignore the local virtual environment
+venv
+.env
+
+# Ignore all bytecode
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+*.pyc
+
+# Ignore the database
+db.sqlite3
+*.sqlite3
+
+# Ignore the static assets that are collected with collectstatic
+/static
+/media
+
+# Ignore the node modules folder in the frontend
+/frontend/node_modules/
+
+# Ignore potential private keys
+*.pem
+*.key
+
+# Ignore git and version control
+.git
+.gitignore
+
+# Ignore other unnecessary files
+*.sublime-workspace
+*.sublime-project
+*.log
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.sass-cache
+.cache
+.vscode
+.idea
+*.iml
+
+# Ignore Docker related files that should not be included in the build context
+Dockerfile
+docker-compose.yml
+.dockerignore
+README.md
+*.md
+LICENSE

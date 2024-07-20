@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=webappdb
+      - POSTGRES_USER=webappuser
+      - POSTGRES_PASSWORD=webapppassword
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    command: python web_app/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://webappuser:webapppassword@db:5432/webappdb
+      - DEBUG=True # Set to False in production
+
+  frontend:
+    build:
+      context: ./web_app/frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./web_app/frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - web
+    environment:
+      - NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
+
+volumes:
+  postgres_data:

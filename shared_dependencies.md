@@ -1,0 +1,66 @@
+Shared Dependencies:
+
+- **Exported Variables:**
+  - `userInputText`
+  - `userInputVoice`
+  - `emotionData`
+  - `needsData`
+  - `actionSuggestions`
+  - `userFeedback`
+  - `actionHistoryData`
+  - `weeklySummaryData`
+  - `userPreferences`
+
+- **Data Schemas:**
+  - `UserInputSchema`
+  - `EmotionDetectionSchema`
+  - `NeedsAnalysisSchema`
+  - `ActionSuggestionSchema`
+  - `UserFeedbackSchema`
+  - `ActionHistorySchema`
+  - `WeeklySummarySchema`
+  - `UserPreferenceSchema`
+
+- **ID Names of DOM Elements:**
+  - `#inputTextBox`
+  - `#voiceInputButton`
+  - `#submitInputButton`
+  - `#suggestedActionsList`
+  - `#actionFeedbackForm`
+  - `#actionHistoryLog`
+  - `#weeklySummaryReport`
+  - `#userPreferencesForm`
+  - `#notificationToggle`
+  - `#dailyTipsSection`
+  - `#predefinedPromptsDropdown`
+
+- **Message Names:**
+  - `InputReceivedMessage`
+  - `EmotionDetectedMessage`
+  - `NeedsIdentifiedMessage`
+  - `ActionsGeneratedMessage`
+  - `FeedbackLoggedMessage`
+  - `HistoryUpdatedMessage`
+  - `SummaryGeneratedMessage`
+  - `PreferencesUpdatedMessage`
+  - `NotificationSentMessage`
+  - `TipOfDayMessage`
+
+- **Function Names:**
+  - `processUserInput(input)`
+  - `detectEmotion(input)`
+  - `analyzeNeeds(emotionData)`
+  - `generateActionSuggestions(needsData)`
+  - `logUserFeedback(feedbackData)`
+  - `updateActionHistory(actionData)`
+  - `generateWeeklySummary(historyData)`
+  - `updateUserPreferences(preferencesData)`
+  - `sendNotification(notificationData)`
+  - `getDailyTip()`
+  - `renderUI()`
+  - `navigateTo(section)`
+  - `personalizeInterface(userPreferences)`
+  - `handleVoiceCommand(command)`
+  - `readTextAloud(text)`
+  - `provideRealTimeFeedback(input)`
+  - `collectUserReview(reviewData)`
